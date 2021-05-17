@@ -1,11 +1,13 @@
 package com.apress.todo.repository;
 
 import com.apress.todo.domain.ToDo;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.Arrays;
 
+@Component
 public class ToDoRepository {
 
     private Flux<ToDo> toDoFlux = Flux.fromIterable(Arrays.asList(
